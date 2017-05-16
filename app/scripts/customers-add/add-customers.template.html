@@ -1,0 +1,40 @@
+<div class="main-content">
+    <form ng-submit="add(addCustomerForm.$valid)" name="addCustomerForm" novalidate>
+    <span>Fields marked with '<span class="symbol">*</span>' are required</span>
+        <div class="form-group">
+            <label for="email" class="required-indication">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" ng-model="customer.email" placeholder="Email" required>
+            <div ng-messages="addCustomerForm.email.$error" class="error-messages" ng-if="addCustomerForm.email.$dirty">
+                <p ng-message="required">Email Id is required</p>
+                <p ng-message="email">Please enter a valid email address</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="firstName" class="required-indication">First Name</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" ng-model="customer.firstName" placeholder="First Name" required>
+            <div ng-messages="addCustomerForm.firstName.$error" class="error-messages" ng-if="addCustomerForm.firstName.$dirty">
+                <p ng-message="required">First Name is required</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lastName" class="required-indication">Last Name</label>
+            <input type="text" class="form-control" id="lastName" name="lastName" ng-model="customer.lastName" placeholder="Last Name" required>
+            <div ng-messages="addCustomerForm.lastName.$error" class="error-messages" ng-if="addCustomerForm.lastName.$dirty">
+                <p ng-message="required">Last Name is required</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" ng-model="customer.phoneNumber" placeholder="Phone Number" ng-pattern="/^[0-9]{10}$/">
+            <div ng-messages="addCustomerForm.phoneNumber.$error" class="error-messages" ng-if="addCustomerForm.phoneNumber.$dirty">
+                <p ng-message="pattern">Please enter a valid 10 digit phone number</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" name="address" ng-model="customer.address" placeholder="Address">
+        </div>
+
+        <button type="submit" class="btn btn-primary" ng-disabled="addCustomerForm.$invalid">Save</button>
+    </form>
+</div>

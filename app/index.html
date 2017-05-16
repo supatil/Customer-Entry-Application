@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <title>Customer Entry Application</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="col-md-6 ">
+            <h1 class="heading-title">Customer Entry Application</h1>
+        </div>
+        <div class="col-md-6">
+            <ul class="nav nav-pills heading-nav">
+                <li role="presentation"><a ui-sref="home" class="is-active">Home</a></li>
+                <li role="presentation"><a ui-sref="customersview" class="is-active">Customers</a></li>
+                <li role="presentation"><a ui-sref="about" class="is-active">About App</a></li>
+                <li role="presentation"><a ui-sref="contact" class="is-active">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <section ui-view>
+    </section>
+    <footer>
+        <div class="footer-content">2017 &copy; Surabhi Patil</div>
+    </footer>
+
+    <script src="https://code.angularjs.org/1.5.9/angular.js"></script>
+    <script src="https://code.angularjs.org/1.5.9/angular-messages.js"></script>
+    <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="vendor/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+    <script src="vendor/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/shared/data.service.js"></script>
+    <script src="scripts/shared/filters/Filter.js"></script>
+    <script src="scripts/shared/modal/modal.controller.js"></script>
+    <script src="scripts/home/home.controller.js"></script>
+    <script src="scripts/about-us/about.controller.js"></script>
+    <script src="scripts/contact/contact.controller.js"></script>
+    <script src="scripts/customers-list/view-customers.controller.js"></script>
+    <script src="scripts/customers-add/add-customers.controller.js"></script>
+    <script src="scripts/customers-edit/edit-customers.controller.js"></script>
+</body>
+
+</html>
